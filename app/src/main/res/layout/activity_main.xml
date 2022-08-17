@@ -4,117 +4,168 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="@drawable/main_gradient"
     tools:context=".MainActivity">
 
-<!--    <TextView-->
-<!--        android:id="@+id/tvWorkManager"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginLeft="16dp"-->
-<!--        android:layout_marginTop="27dp"-->
-<!--        android:text="WORKOUT MANAGER"-->
-<!--        android:textColor="@color/white"-->
-<!--        android:textSize="22dp"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
-
     <LinearLayout
+        android:id="@+id/ll1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/black"
+            app:cardCornerRadius="18dp">
 
             <Button
                 android:id="@+id/btMonday"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="80dp"
-                android:layout_marginRight="5dp"
-                android:text="MONDAY"
-                app:cornerRadius="13in" />
-
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Monday"
+                app:cornerRadius="30in"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/white"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/black"
+            app:cardCornerRadius="18dp">
 
             <Button
                 android:id="@+id/btTuesday"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="80dp"
-                android:layout_marginRight="16dp"
-                android:text="TUESDAY"
+                android:text="Tuesday"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/black"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll1">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/black"
+            app:cardCornerRadius="18dp">
+
+            <Button
+                android:id="@+id/btWednesday"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/black"
+                android:text="Wednesday"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/white"
                 app:cornerRadius="13in" />
         </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="18dp">
+
+            <Button
+                android:id="@+id/btThursday"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#0000ffff"
+                android:text="Thursday"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/black"
+                app:cornerRadius="13in" />
+
+        </androidx.cardview.widget.CardView>
+
     </LinearLayout>
-<!--    <Button-->
-<!--            android:id="@+id/btWednesday"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginLeft="16dp"-->
-<!--            android:layout_marginRight="5dp"-->
-<!--            android:text="WEDNESDAY"-->
-<!--            app:cornerRadius="13in"-->
-<!--            app:layout_constraintEnd_toStartOf="@id/btThursday"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@id/btMonday" />-->
 
-<!--        <Button-->
-<!--            android:id="@+id/btThursday"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginLeft="5dp"-->
-<!--            android:layout_marginRight="16dp"-->
-<!--            android:text="THURSDAY"-->
-<!--            app:cornerRadius="13in"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toEndOf="@id/btWednesday"-->
-<!--            app:layout_constraintTop_toBottomOf="@id/btTuesday" />-->
+    <LinearLayout
+        android:id="@+id/ll3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll2">
 
-<!--    <Button-->
-<!--        android:id="@+id/btFriday"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginLeft="16dp"-->
-<!--        android:layout_marginRight="5dp"-->
-<!--        android:text="FRIDAY"-->
-<!--        app:cornerRadius="13in"-->
-<!--        app:layout_constraintEnd_toStartOf="@id/btSaturday"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/btWednesday" />-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="18dp">
 
-<!--        <Button-->
-<!--            android:id="@+id/btSaturday"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginLeft="5dp"-->
-<!--            android:layout_marginRight="16dp"-->
-<!--            android:text="SATURDAY"-->
-<!--            app:cornerRadius="13in"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toEndOf="@id/btFriday"-->
-<!--            app:layout_constraintTop_toBottomOf="@id/btThursday" />-->
+            <Button
+                android:id="@+id/btFriday"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#0000ffff"
+                android:text="Friday"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/black"
+                app:cornerRadius="13in" />
+        </androidx.cardview.widget.CardView>
 
-<!--    <androidx.recyclerview.widget.RecyclerView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:layout_marginTop="25dp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/btFriday" />-->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="18dp"
+            >
 
+            <Button
+                android:id="@+id/btSaturday"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#0000ffff"
+                android:text="Saturday"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/black"
+                app:cornerRadius="13in" />
 
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll3" />
 </androidx.constraintlayout.widget.ConstraintLayout>
