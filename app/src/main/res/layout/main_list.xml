@@ -20,6 +20,8 @@
             android:layout_height="91dp"
             android:gravity="center"
             android:orientation="horizontal"
+            android:background="@drawable/main_gradient_rv"
+
             tools:ignore="UseCompoundDrawables">
 
             <ImageView
@@ -30,11 +32,11 @@
                 android:src="@mipmap/ic_launcher" />
 
             <TextView
-                android:id="@+id/tv_item_name"
+                android:id="@+id/tvBody"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/white"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 tools:text="Item" />
