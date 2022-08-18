@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:padding="10dp"
+
         app:cardCornerRadius="5dp"
         app:cardElevation="60dp">
 
@@ -29,17 +30,18 @@
                 android:layout_height="75dp"
                 android:layout_marginLeft="10dp"
                 android:contentDescription="@string/app_name"
-                android:src="@mipmap/ic_launcher" />
+                android:src="@drawable/bicep" />
 
-            <TextView
+            <Button
                 android:id="@+id/tvBody"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#0000ffff"
                 android:layout_margin="10dp"
                 android:textColor="@android:color/white"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                tools:text="Item" />
+                android:textAlignment="viewStart"
+                tools:text="Item"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </LinearLayout>
