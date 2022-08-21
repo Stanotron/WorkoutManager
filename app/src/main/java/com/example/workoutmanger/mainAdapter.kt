@@ -29,7 +29,7 @@ class mainAdapter (val context: Context, val items : ArrayList<String>): Recycle
     }
 
     class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
-        val bodyItem = view.tvBody
+        val bodyItem = view.btBody
         val cvItem = view.card_view_item
     }
 }
