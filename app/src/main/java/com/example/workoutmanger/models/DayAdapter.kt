@@ -1,7 +1,6 @@
 package com.example.workoutmanger.models
 
 import android.content.Context
-import android.icu.text.Transliterator
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +9,7 @@ import com.example.workoutmanger.R
 import com.example.workoutmanger.models.DayAdapter.*
 import kotlinx.android.synthetic.main.per_day_list.view.*
 
-class DayAdapter(val perDayContext: Context, val perDayExer: ArrayList<String>, val perExPic : List<DayActivity.photo> ): RecyclerView.Adapter<DayAdapter.ViewHolder>() {
+class DayAdapter(val perDayContext: Context, val perDayExer: ArrayList<String>, val perExPic : ArrayList<photo> ): RecyclerView.Adapter<DayAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
        return ViewHolder(

@@ -1,14 +1,11 @@
 package com.example.workoutmanger.models
 
 import android.os.Bundle
-import android.view.View
-import androidx.annotation.DrawableRes
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.workoutmanger.R
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.exercise_day.*
-import java.util.*
 import kotlin.collections.ArrayList
 
 class DayActivity : AppCompatActivity() {
@@ -23,22 +20,6 @@ class DayActivity : AppCompatActivity() {
         rvPerDay.adapter = ExerAdapter
 
 
-    }
-
-    data class photo(
-        @DrawableRes val imageID: Int
-    )
-
-    private fun loadPhotos(): List<photo> {
-        return listOf<photo>(
-            photo(R.drawable.benchpress),
-            photo(R.drawable.flatdumbbellpress),
-            photo(R.drawable.shoulderpress),
-            photo(R.drawable.butterfly),
-            photo(R.drawable.lateralraises),
-            photo(R.drawable.skullcrusher),
-            photo(R.drawable.tricepdips)
-        )
     }
 
     private fun exerList(): ArrayList<String> {
@@ -78,8 +59,8 @@ class DayActivity : AppCompatActivity() {
                 "Butterfly",
                 "Overhead Triceps",
                 "Lateral Raises",
-                "CLose Grip Bench Press",
-                "Pushups"
+                "Close Grip Bench Press",
+                "Push-ups"
             )
         )
         val friEx = ArrayList<String>()
@@ -109,5 +90,88 @@ class DayActivity : AppCompatActivity() {
             Exerc = friEx
         else Exerc = satEx
         return Exerc
+    }
+
+    fun loadPhotos(): ArrayList<photo> {
+        var listToSend = ArrayList<photo>()
+        val dayName = findViewById(R.id.tvDayName) as TextView
+        val str = dayName.text.toString()
+        if( str == "MONDAY") {
+            listToSend.addAll(
+                listOf<photo>(
+                    photo(R.drawable.benchpress),
+                    photo(R.drawable.flatdumbbellpress),
+                    photo(R.drawable.shoulderpress),
+                    photo(R.drawable.butterfly),
+                    photo(R.drawable.lateralraises),
+                    photo(R.drawable.skullcrusher),
+                    photo(R.drawable.tricepdips)
+                )
+            )
+        }
+        else if(str=="TUESDAY"){
+            listToSend.addAll(
+                listOf<photo>(
+                    photo(R.drawable.latpulldown),
+                    photo(R.drawable.bentoverrows),
+                    photo(R.drawable.inclinecurls),
+                    photo(R.drawable.machinerow),
+                    photo(R.drawable.barbellcurls),
+                    photo(R.drawable.dumbbellcurls),
+                    photo(R.drawable.hammercurls)
+                )
+            )
+        }
+        else if(str=="WEDNESDAY"){
+            listToSend.addAll(
+                listOf<photo>(
+                    photo(R.drawable.lunges),
+                    photo(R.drawable.deadlift),
+                    photo(R.drawable.squats),
+                    photo(R.drawable.calfraises),
+                    photo(R.drawable.hamstringcurls)
+                )
+            )
+        }
+        else if( str == "THURSDAY") {
+            listToSend.addAll(
+                listOf<photo>(
+                    photo(R.drawable.flatbenchpress),
+                    photo(R.drawable.inclinecurls),
+                    photo(R.drawable.shoulderpress),
+                    photo(R.drawable.butterfly),
+                    photo(R.drawable.overheadtriceps),
+                    photo(R.drawable.lateralraises),
+                    photo(R.drawable.closegrippress),
+                    photo(R.drawable.pushups)
+                )
+            )
+        }
+        else if(str=="FRIDAY"){
+            listToSend.addAll(
+                listOf<photo>(
+                    photo(R.drawable.tbarrow),
+                    photo(R.drawable.str8armpulldown),
+                    photo(R.drawable.hammercurls),
+                    photo(R.drawable.reversegrippulldown),
+                    photo(R.drawable.cablecurls),
+                    photo(R.drawable.cablerows),
+                    photo(R.drawable.barbellcurls),
+                    photo(R.drawable.dumbbellcurls)
+                )
+            )
+        }
+        else if(str=="SATURDAY"){
+            listToSend.addAll(
+                listOf<photo>(
+                    photo(R.drawable.squats),
+                    photo(R.drawable.legpress),
+                    photo(R.drawable.frontsquats),
+                    photo(R.drawable.legextension),
+                    photo(R.drawable.calfraises)
+                )
+            )
+        }
+        return listToSend
     }
 }
