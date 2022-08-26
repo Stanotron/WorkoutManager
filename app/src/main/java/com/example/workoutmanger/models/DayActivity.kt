@@ -78,6 +78,61 @@ class DayActivity : AppCompatActivity() {
         )
         val satEx = ArrayList<String>()
         satEx.addAll(listOf("Squats", "Leg Press", "Front Squats", "Leg Extension", "Calf Raises"))
+        val chestEx = ArrayList<String>()
+        chestEx.addAll(listOf(
+            "Incline Bench Press",
+            "Flat Dumbbell Press",
+            "Butterfly",
+            "Flat Bench Press",
+            "Incline Dumbbell Press",
+            "Push-ups")
+        )
+        val backEx = ArrayList<String>()
+        backEx.addAll(listOf(
+            "Bent Over Rows",
+            "Cable Rows",
+            "Deadlift",
+            "Lat Pull Down",
+            "Machine row",
+            "Straight Arm Pull Down",
+            "T-bar row"
+            )
+        )
+        val bicepEx = ArrayList<String>()
+        bicepEx.addAll(listOf(
+            "Incline Bicep Curls",
+            "Barbell Curls",
+            "Dumbbell Curls",
+            "Hammer Curls" ,
+            "Cable Curls"
+            )
+        )
+        val tricepEx = ArrayList<String>()
+        tricepEx.addAll(listOf(
+            "Skull Crusher",
+            "Triceps Dips",
+            "Overhead Triceps",
+            "Close Grip Bench Press"
+            )
+        )
+        val shoulderEx = ArrayList<String>()
+        shoulderEx.addAll(listOf(
+            "Shoulder Press",
+            "Lateral Raises"
+            )
+        )
+        val legsEx = ArrayList<String>()
+        legsEx.addAll(listOf(
+            "Lunges",
+            "Deadlift",
+            "Squats",
+            "Calf Raises",
+            "Hamstring Curls",
+            "Leg Press",
+            "Front Squats",
+            "Leg Extension"
+            )
+        )
         if (tvDayName.text == "MONDAY")
             Exerc = monEx
         else if (tvDayName.text == "TUESDAY")
@@ -88,6 +143,18 @@ class DayActivity : AppCompatActivity() {
             Exerc = thurEx
         else if (tvDayName.text == "FRIDAY")
             Exerc = friEx
+        else if (tvDayName.text == "Chest")
+            Exerc = chestEx
+        else if (tvDayName.text == "Back")
+            Exerc = backEx
+        else if (tvDayName.text == "Shoulder")
+            Exerc = shoulderEx
+        else if (tvDayName.text == "Legs")
+            Exerc = legsEx
+        else if (tvDayName.text == "Biceps")
+            Exerc = bicepEx
+        else if (tvDayName.text == "Triceps")
+            Exerc = tricepEx
         else Exerc = satEx
         return Exerc
     }
@@ -137,7 +204,7 @@ class DayActivity : AppCompatActivity() {
             listToSend.addAll(
                 listOf<photo>(
                     photo(R.drawable.flatbenchpress),
-                    photo(R.drawable.inclinecurls),
+                    photo(R.drawable.inclinedbpress),
                     photo(R.drawable.shoulderpress),
                     photo(R.drawable.butterfly),
                     photo(R.drawable.overheadtriceps),
@@ -169,6 +236,74 @@ class DayActivity : AppCompatActivity() {
                     photo(R.drawable.frontsquats),
                     photo(R.drawable.legextension),
                     photo(R.drawable.calfraises)
+                )
+            )
+        }
+        else if(str=="Chest"){
+            listToSend.addAll(
+                listOf<photo>(
+                    photo(R.drawable.benchpress),
+                    photo(R.drawable.flatdumbbellpress),
+                    photo(R.drawable.butterfly),
+                    photo(R.drawable.flatbenchpress),
+                    photo(R.drawable.flatdumbbellpress),
+                    photo(R.drawable.pushups)
+                )
+            )
+        }
+        else if(str=="Back"){
+            listToSend.addAll(
+                listOf<photo>(
+                    photo(R.drawable.bentoverrows),
+                    photo(R.drawable.cablerows),
+                    photo(R.drawable.deadlift),
+                    photo(R.drawable.latpulldown),
+                    photo(R.drawable.machinerow),
+                    photo(R.drawable.str8armpulldown),
+                    photo(R.drawable.tbarrow)
+                )
+            )
+        }
+        else if(str=="Shoulder"){
+            listToSend.addAll(
+                listOf<photo>(
+                    photo(R.drawable.shoulderpress),
+                    photo(R.drawable.lateralraises),
+                )
+            )
+        }
+        else if(str=="Legs"){
+            listToSend.addAll(
+                listOf<photo>(
+                    photo(R.drawable.lunges),
+                    photo(R.drawable.deadlift),
+                    photo(R.drawable.squats),
+                    photo(R.drawable.calfraises),
+                    photo(R.drawable.hamstringcurls),
+                    photo(R.drawable.legpress),
+                    photo(R.drawable.frontsquats),
+                    photo(R.drawable.legextension)
+                )
+            )
+        }
+        else if(str=="Triceps"){
+            listToSend.addAll(
+                listOf<photo>(
+                    photo(R.drawable.skullcrusher),
+                    photo(R.drawable.tricepdips),
+                    photo(R.drawable.overheadtriceps),
+                    photo(R.drawable.closegrippress)
+                )
+            )
+        }
+        else if(str=="Biceps"){
+            listToSend.addAll(
+                listOf<photo>(
+                    photo(R.drawable.inclinecurls),
+                    photo(R.drawable.barbellcurls),
+                    photo(R.drawable.dumbbellcurls),
+                    photo(R.drawable.hammercurls),
+                    photo(R.drawable.cablecurls)
                 )
             )
         }

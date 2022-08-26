@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/main_gradient"
+    android:background="@drawable/gradient3"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -191,7 +191,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="EXERCISE BY PART "
-        android:textStyle="bold"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
