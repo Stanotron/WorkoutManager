@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="colorAccent">#ff2d9a59</color>
     <color name="t2">#ff23729a</color>
+    <color name="extra">#DDB3F9</color>
 </resources>

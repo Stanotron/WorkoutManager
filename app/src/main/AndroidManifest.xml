@@ -23,6 +23,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".models.DayActivity"></activity>
+        <activity android:name=".ExerciseActivity"></activity>
     </application>
 
 </manifest>
