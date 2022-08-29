@@ -19,6 +19,9 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
+            android:backgroundTint="#2ECC71"
+            android:shape="ring"
+            app:cardElevation="3dp"
             android:layout_height="match_parent"
             android:layout_margin="15dp"
             android:layout_weight="1"
@@ -32,17 +35,19 @@
                 app:cornerRadius="30in"
                 app:cardCornerRadius="50dp"
                 app:cardElevation="60dp"
-                android:background="?android:attr/selectableItemBackground"
                 android:textColor="@color/black"
+                android:background="?android:attr/selectableItemBackground"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
+            android:backgroundTint="#2ECC71"
+            android:shape="ring"
+            app:cardElevation="3dp"
             android:layout_height="match_parent"
             android:layout_margin="15dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/white"
             app:cardCornerRadius="50dp"
             >
 
@@ -74,10 +79,12 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
+            android:backgroundTint="#2ECC71"
+            android:shape="ring"
+            app:cardElevation="3dp"
             android:layout_height="match_parent"
             android:layout_margin="15dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/white"
             app:cardCornerRadius="50dp"
            >
 
@@ -96,10 +103,12 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
+            android:backgroundTint="#2ECC71"
+            android:shape="ring"
+            app:cardElevation="3dp"
             android:layout_height="match_parent"
             android:layout_margin="15dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/white"
             app:cardCornerRadius="50dp">
 
             <Button
@@ -130,10 +139,12 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
+            android:backgroundTint="#2ECC71"
+            android:shape="ring"
+            app:cardElevation="3dp"
             android:layout_height="match_parent"
             android:layout_margin="15dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/white"
             app:cardCornerRadius="50dp">
 
             <Button
@@ -151,10 +162,12 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
+            android:backgroundTint="#2ECC71"
+            android:shape="ring"
+            app:cardElevation="3dp"
             android:layout_height="match_parent"
             android:layout_margin="15dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/white"
             app:cardCornerRadius="50dp"
             >
 
