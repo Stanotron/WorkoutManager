@@ -22,7 +22,7 @@
             android:layout_height="91dp"
             android:gravity="center"
             android:orientation="horizontal"
-            android:background="#201F20"
+            android:background="#000000"
             tools:ignore="UseCompoundDrawables">
 
             <ImageView

@@ -1,16 +1,23 @@
 package com.example.workoutmanger
 
 import android.content.Intent
+import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.workoutmanger.models.DayActivity
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.exercise_activity.*
 
 class ExerciseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.exercise_activity)
+
+        val animDraw = exercise_layout.background as AnimationDrawable
+        animDraw.setEnterFadeDuration(10)
+        animDraw.setExitFadeDuration(5000)
+        animDraw.start()
 
         rvMain.layoutManager = LinearLayoutManager(this)
         val itemAdapter = mainAdapter(this, getList())

@@ -24,60 +24,58 @@ class DayActivity : AppCompatActivity() {
 
     private fun exerList(): ArrayList<String> {
         var Exerc = ArrayList<String>()
-        val monEx = ArrayList<String>()
-        monEx.addAll(
-            listOf(
-                "Incline Bench Press",
-                "Flat Dumbbell Press",
-                "Dumbbell Shoulder Press",
-                "Butterfly X Tricep Extension (Superset)",
-                "Lateral Raises",
-                "Skull Crusher",
-                "Tricep Dips"
-            )
+        val monEx = mapOf(
+                Pair("Incline Bench Press",115),
+                Pair("Flat Dumbbell Press",111),
+                Pair("Dumbbell Shoulder Press",85),
+                Pair("Butterfly X Tricep Extension (Superset)",98),
+                Pair("Lateral Raises",68),
+                Pair("Skull Crusher",102),
+                Pair("Tricep Dips",60)
         )
-        val tuesEx = ArrayList<String>()
-        tuesEx.addAll(
-            listOf(
-                "Lat Pull Down",
-                "Bent Over Rows",
-                "Inclined Seated Dumbbell Curls",
-                "Machine Row",
-                "Z Barbell Curls",
-                "Dumbbell Curls",
-                "Hammer Curls"
-            )
+        val tuesEx = mapOf(
+                Pair("Lat Pull Down",111),
+                Pair("Bent Over Rows",102),
+                Pair("Inclined Seated Dumbbell Curls",85),
+                Pair("Machine Row",85),
+                Pair("EZ Barbell Curls",94),
+                Pair("Dumbbell Curls",81),
+                Pair("Hammer Curls",77)
         )
-        val wedEx = ArrayList<String>()
-        wedEx.addAll(listOf("Lunges", "Deadlift", "Hack Squats", "Calf Raises", "Hamstring Curls"))
-        val thurEx = ArrayList<String>()
-        thurEx.addAll(
-            listOf(
-                "Flat Bench Press",
-                "Incline Dumbbell Press",
-                "Standing Dumbbell Shoulder Press",
-                "Butterfly",
-                "Overhead Triceps",
-                "Lateral Raises",
-                "Close Grip Bench Press",
-                "Push-ups"
-            )
+        val wedEx = mapOf(
+                Pair("Lunges",123),
+                Pair("Deadlift",128),
+                Pair("Hack Squats",119),
+                Pair("Calf Raises",51),
+                Pair("Hamstring Curls",68)
         )
-        val friEx = ArrayList<String>()
-        friEx.addAll(
-            listOf(
-                "T-Bar Row",
-                "Straight Arm Pulldown",
-                "Hammer Curls",
-                "Reverse Grip Pulldown",
-                "Cable Curls",
-                "Cable Rows",
-                "Barbell Curls",
-                "Dumbbell Curls"
-            )
+        val thurEx = mapOf(
+                Pair("Flat Bench Press",115),
+                Pair("Incline Dumbbell Press",111),
+                Pair("Standing Dumbbell Shoulder Press",85),
+                Pair("Butterfly",98),
+                Pair("Overhead Triceps",68),
+                Pair("Lateral Raises",68),
+                Pair("Close Grip Bench Press",102),
+                Pair("Push-ups",85)
         )
-        val satEx = ArrayList<String>()
-        satEx.addAll(listOf("Squats", "Leg Press", "Front Squats", "Leg Extension", "Calf Raises"))
+        val friEx = mapOf(
+                Pair("T-Bar Row",102),
+                Pair("Straight Arm Pulldown",102),
+                Pair("Hammer Curls",77),
+                Pair("Reverse Grip Pulldown",68),
+                Pair("Cable Curls",81),
+                Pair("Cable Rows",94),
+                Pair("Barbell Curls",89),
+                Pair("Dumbbell Curls",81)
+        )
+        val satEx = mapOf(
+                Pair("Squats",119),
+                Pair("Leg Press",99),
+                Pair("Front Squats",119),
+                Pair("Leg Extension",68),
+                Pair("Calf Raises",51)
+        )
         val chestEx = ArrayList<String>()
         chestEx.addAll(listOf(
             "Incline Bench Press",
@@ -133,16 +131,48 @@ class DayActivity : AppCompatActivity() {
             "Leg Extension"
             )
         )
-        if (tvDayName.text == "MONDAY")
-            Exerc = monEx
-        else if (tvDayName.text == "TUESDAY")
-            Exerc = tuesEx
-        else if (tvDayName.text == "WEDNESDAY")
-            Exerc = wedEx
-        else if (tvDayName.text == "THURSDAY")
-            Exerc = thurEx
-        else if (tvDayName.text == "FRIDAY")
-            Exerc = friEx
+        if (tvDayName.text == "MONDAY"){
+            val itr = monEx.keys.iterator()
+            while(itr.hasNext()){
+                val key = itr.next()
+                Exerc.add(key)
+            }
+        }
+        else if (tvDayName.text == "TUESDAY"){
+            val itr = tuesEx.keys.iterator()
+            while(itr.hasNext()){
+                val key = itr.next()
+                Exerc.add(key)
+            }
+        }
+        else if (tvDayName.text == "WEDNESDAY"){
+            val itr = wedEx.keys.iterator()
+            while(itr.hasNext()){
+                val key = itr.next()
+                Exerc.add(key)
+            }
+        }
+        else if (tvDayName.text == "THURSDAY"){
+            val itr = thurEx.keys.iterator()
+            while(itr.hasNext()){
+                val key = itr.next()
+                Exerc.add(key)
+            }
+        }
+        else if (tvDayName.text == "FRIDAY"){
+            val itr = friEx.keys.iterator()
+            while(itr.hasNext()){
+                val key = itr.next()
+                Exerc.add(key)
+            }
+        }
+        else if (tvDayName.text == "SATURDAY"){
+            val itr = satEx.keys.iterator()
+            while(itr.hasNext()){
+                val key = itr.next()
+                Exerc.add(key)
+            }
+        }
         else if (tvDayName.text == "Chest")
             Exerc = chestEx
         else if (tvDayName.text == "Back")
@@ -155,7 +185,6 @@ class DayActivity : AppCompatActivity() {
             Exerc = bicepEx
         else if (tvDayName.text == "Triceps")
             Exerc = tricepEx
-        else Exerc = satEx
         return Exerc
     }
 
