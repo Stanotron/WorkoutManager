@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.workoutmanger.R
 import kotlinx.android.synthetic.main.exercise_day.*
+import kotlinx.android.synthetic.main.per_day_list.*
 import kotlin.collections.ArrayList
 
 class DayActivity : AppCompatActivity() {
@@ -18,10 +19,7 @@ class DayActivity : AppCompatActivity() {
         rvPerDay.layoutManager = LinearLayoutManager(this)
         val ExerAdapter = DayAdapter(this, exerList(), loadPhotos())
         rvPerDay.adapter = ExerAdapter
-
-
     }
-
     private fun exerList(): ArrayList<String> {
         var Exerc = ArrayList<String>()
         val monEx = mapOf(

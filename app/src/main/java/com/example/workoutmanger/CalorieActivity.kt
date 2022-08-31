@@ -6,12 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.workoutmanger.models.CalExerciseAdapter
 import kotlinx.android.synthetic.main.calorie_activtiy.*
-import kotlinx.android.synthetic.main.per_calorie_list.*
-import kotlinx.android.synthetic.main.per_day_list.*
 
 class CalorieActivity: AppCompatActivity() {
-
-    private lateinit var calories : ArrayList<Int>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.calorie_activtiy)
@@ -24,7 +20,6 @@ class CalorieActivity: AppCompatActivity() {
         rvExDone.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
         val itemAdapter = CalExerciseAdapter(mutableListOf())
         rvExDone.adapter = itemAdapter
-
 
     }
 }
