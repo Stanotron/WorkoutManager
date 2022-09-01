@@ -1,19 +1,24 @@
 package com.example.workoutmanger.models
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CompoundButton
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.example.workoutmanger.CalorieActivity
+import com.example.workoutmanger.ExerciseActivity
 import com.example.workoutmanger.R
+import com.example.workoutmanger.listToImport
 import com.example.workoutmanger.models.DayAdapter.*
 import kotlinx.android.synthetic.main.activity_main.view.*
 import kotlinx.android.synthetic.main.per_day_button.view.*
 import kotlinx.android.synthetic.main.per_day_list.view.*
 import java.lang.IllegalArgumentException
 
-class DayAdapter(val perDayContext: Context, val perDayExer: ArrayList<String>, val perExPic : ArrayList<photo> ): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class DayAdapter(val perDayContext: Context, val perDayList: ArrayList<info>): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         val totalEx : Map<String,Int> = mapOf(
         Pair("Incline Bench Press",115),
         Pair("Flat Dumbbell Press",111),
@@ -74,31 +79,36 @@ class DayAdapter(val perDayContext: Context, val perDayExer: ArrayList<String>, 
     }
 
     override fun getItemCount(): Int {
-        return perDayExer.size+1
+        return perDayList.size+1
     }
 
     override fun getItemViewType(position: Int): Int {
         return when (position){
-            perDayExer.size -> R.layout.per_day_button
+            perDayList.size -> R.layout.per_day_button
             else -> R.layout.per_day_list
         }
     }
     inner class ViewHolder1(view: View): RecyclerView.ViewHolder(view) {
         val exText = view.tvExercise
         val imageOfExer = view.ivExercise
+        val cbox = view.cbExercise
 
         fun bind(position: Int){
-            val exer = perDayExer.get(position)
-            val pic = perExPic.get(position)
-            exText.text = exer
-            imageOfExer.setImageResource(pic.imageID)
+            val item = perDayList[position]
+            exText.text = item.heading
+            imageOfExer.setImageResource(item.pic.imageID)
+            cbox.setOnCheckedChangeListener { buttonView, isChecked ->
+                if (item.isChecked) {
+                    listToImport.add(ExerCal(item.heading, totalEx[item.heading]!!))
+                }
+            }
         }
     }
     inner class ViewHolder2(view: View): RecyclerView.ViewHolder(view) {
         val button = view.btExDone
         fun bind(){
             button.setOnClickListener{
-
+                perDayContext.startActivity(Intent(perDayContext,CalorieActivity::class.java))
             }
         }
     }

@@ -4,8 +4,11 @@ import android.content.Intent
 import android.graphics.drawable.AnimationDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.workoutmanger.models.ExerCal
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.exercise_activity.*
+
+val listToImport :  ArrayList<ExerCal> = arrayListOf()
 
 class MainActivity : AppCompatActivity() {
 

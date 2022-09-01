@@ -1,12 +1,10 @@
 package com.example.workoutmanger.models
 
 import android.os.Bundle
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.workoutmanger.R
 import kotlinx.android.synthetic.main.exercise_day.*
-import kotlinx.android.synthetic.main.per_day_list.*
 import kotlin.collections.ArrayList
 
 class DayActivity : AppCompatActivity() {
@@ -17,323 +15,133 @@ class DayActivity : AppCompatActivity() {
         val day = intent.getStringExtra("key")
         tvDayName.text = day
         rvPerDay.layoutManager = LinearLayoutManager(this)
-        val ExerAdapter = DayAdapter(this, exerList(), loadPhotos())
+        val ExerAdapter = DayAdapter(this, list())
         rvPerDay.adapter = ExerAdapter
     }
-    private fun exerList(): ArrayList<String> {
-        var Exerc = ArrayList<String>()
-        val monEx = mapOf(
-                Pair("Incline Bench Press",115),
-                Pair("Flat Dumbbell Press",111),
-                Pair("Dumbbell Shoulder Press",85),
-                Pair("Butterfly X Tricep Extension (Superset)",98),
-                Pair("Lateral Raises",68),
-                Pair("Skull Crusher",102),
-                Pair("Tricep Dips",60)
-        )
-        val tuesEx = mapOf(
-                Pair("Lat Pull Down",111),
-                Pair("Bent Over Rows",102),
-                Pair("Inclined Seated Dumbbell Curls",85),
-                Pair("Machine Row",85),
-                Pair("EZ Barbell Curls",94),
-                Pair("Dumbbell Curls",81),
-                Pair("Hammer Curls",77)
-        )
-        val wedEx = mapOf(
-                Pair("Lunges",123),
-                Pair("Deadlift",128),
-                Pair("Hack Squats",119),
-                Pair("Calf Raises",51),
-                Pair("Hamstring Curls",68)
-        )
-        val thurEx = mapOf(
-                Pair("Flat Bench Press",115),
-                Pair("Incline Dumbbell Press",111),
-                Pair("Standing Dumbbell Shoulder Press",85),
-                Pair("Butterfly",98),
-                Pair("Overhead Triceps",68),
-                Pair("Lateral Raises",68),
-                Pair("Close Grip Bench Press",102),
-                Pair("Push-ups",85)
-        )
-        val friEx = mapOf(
-                Pair("T-Bar Row",102),
-                Pair("Straight Arm Pulldown",102),
-                Pair("Hammer Curls",77),
-                Pair("Reverse Grip Pulldown",68),
-                Pair("Cable Curls",81),
-                Pair("Cable Rows",94),
-                Pair("Barbell Curls",89),
-                Pair("Dumbbell Curls",81)
-        )
-        val satEx = mapOf(
-                Pair("Squats",119),
-                Pair("Leg Press",99),
-                Pair("Front Squats",119),
-                Pair("Leg Extension",68),
-                Pair("Calf Raises",51)
-        )
-        val chestEx = ArrayList<String>()
-        chestEx.addAll(listOf(
-            "Incline Bench Press",
-            "Flat Dumbbell Press",
-            "Butterfly",
-            "Flat Bench Press",
-            "Incline Dumbbell Press",
-            "Push-ups")
-        )
-        val backEx = ArrayList<String>()
-        backEx.addAll(listOf(
-            "Bent Over Rows",
-            "Cable Rows",
-            "Deadlift",
-            "Lat Pull Down",
-            "Machine row",
-            "Straight Arm Pull Down",
-            "T-bar row"
-            )
-        )
-        val bicepEx = ArrayList<String>()
-        bicepEx.addAll(listOf(
-            "Incline Bicep Curls",
-            "Barbell Curls",
-            "Dumbbell Curls",
-            "Hammer Curls" ,
-            "Cable Curls"
-            )
-        )
-        val tricepEx = ArrayList<String>()
-        tricepEx.addAll(listOf(
-            "Skull Crusher",
-            "Triceps Dips",
-            "Overhead Triceps",
-            "Close Grip Bench Press"
-            )
-        )
-        val shoulderEx = ArrayList<String>()
-        shoulderEx.addAll(listOf(
-            "Shoulder Press",
-            "Lateral Raises"
-            )
-        )
-        val legsEx = ArrayList<String>()
-        legsEx.addAll(listOf(
-            "Lunges",
-            "Deadlift",
-            "Squats",
-            "Calf Raises",
-            "Hamstring Curls",
-            "Leg Press",
-            "Front Squats",
-            "Leg Extension"
-            )
-        )
-        if (tvDayName.text == "MONDAY"){
-            val itr = monEx.keys.iterator()
-            while(itr.hasNext()){
-                val key = itr.next()
-                Exerc.add(key)
-            }
-        }
-        else if (tvDayName.text == "TUESDAY"){
-            val itr = tuesEx.keys.iterator()
-            while(itr.hasNext()){
-                val key = itr.next()
-                Exerc.add(key)
-            }
-        }
-        else if (tvDayName.text == "WEDNESDAY"){
-            val itr = wedEx.keys.iterator()
-            while(itr.hasNext()){
-                val key = itr.next()
-                Exerc.add(key)
-            }
-        }
-        else if (tvDayName.text == "THURSDAY"){
-            val itr = thurEx.keys.iterator()
-            while(itr.hasNext()){
-                val key = itr.next()
-                Exerc.add(key)
-            }
-        }
-        else if (tvDayName.text == "FRIDAY"){
-            val itr = friEx.keys.iterator()
-            while(itr.hasNext()){
-                val key = itr.next()
-                Exerc.add(key)
-            }
-        }
-        else if (tvDayName.text == "SATURDAY"){
-            val itr = satEx.keys.iterator()
-            while(itr.hasNext()){
-                val key = itr.next()
-                Exerc.add(key)
-            }
-        }
-        else if (tvDayName.text == "Chest")
-            Exerc = chestEx
-        else if (tvDayName.text == "Back")
-            Exerc = backEx
-        else if (tvDayName.text == "Shoulder")
-            Exerc = shoulderEx
-        else if (tvDayName.text == "Legs")
-            Exerc = legsEx
-        else if (tvDayName.text == "Biceps")
-            Exerc = bicepEx
-        else if (tvDayName.text == "Triceps")
-            Exerc = tricepEx
-        return Exerc
-    }
 
-    fun loadPhotos(): ArrayList<photo> {
-        var listToSend = ArrayList<photo>()
-        val dayName = findViewById(R.id.tvDayName) as TextView
-        val str = dayName.text.toString()
-        if( str == "MONDAY") {
-            listToSend.addAll(
-                listOf<photo>(
-                    photo(R.drawable.benchpress),
-                    photo(R.drawable.flatdumbbellpress),
-                    photo(R.drawable.shoulderpress),
-                    photo(R.drawable.butterfly),
-                    photo(R.drawable.lateralraises),
-                    photo(R.drawable.skullcrusher),
-                    photo(R.drawable.tricepdips)
-                )
-            )
-        }
-        else if(str=="TUESDAY"){
-            listToSend.addAll(
-                listOf<photo>(
-                    photo(R.drawable.latpulldown),
-                    photo(R.drawable.bentoverrows),
-                    photo(R.drawable.inclinecurls),
-                    photo(R.drawable.machinerow),
-                    photo(R.drawable.barbellcurls),
-                    photo(R.drawable.dumbbellcurls),
-                    photo(R.drawable.hammercurls)
-                )
-            )
-        }
-        else if(str=="WEDNESDAY"){
-            listToSend.addAll(
-                listOf<photo>(
-                    photo(R.drawable.lunges),
-                    photo(R.drawable.deadlift),
-                    photo(R.drawable.squats),
-                    photo(R.drawable.calfraises),
-                    photo(R.drawable.hamstringcurls)
-                )
-            )
-        }
-        else if( str == "THURSDAY") {
-            listToSend.addAll(
-                listOf<photo>(
-                    photo(R.drawable.flatbenchpress),
-                    photo(R.drawable.inclinedbpress),
-                    photo(R.drawable.shoulderpress),
-                    photo(R.drawable.butterfly),
-                    photo(R.drawable.overheadtriceps),
-                    photo(R.drawable.lateralraises),
-                    photo(R.drawable.closegrippress),
-                    photo(R.drawable.pushups)
-                )
-            )
-        }
-        else if(str=="FRIDAY"){
-            listToSend.addAll(
-                listOf<photo>(
-                    photo(R.drawable.tbarrow),
-                    photo(R.drawable.str8armpulldown),
-                    photo(R.drawable.hammercurls),
-                    photo(R.drawable.reversegrippulldown),
-                    photo(R.drawable.cablecurls),
-                    photo(R.drawable.cablerows),
-                    photo(R.drawable.barbellcurls),
-                    photo(R.drawable.dumbbellcurls)
-                )
-            )
-        }
-        else if(str=="SATURDAY"){
-            listToSend.addAll(
-                listOf<photo>(
-                    photo(R.drawable.squats),
-                    photo(R.drawable.legpress),
-                    photo(R.drawable.frontsquats),
-                    photo(R.drawable.legextension),
-                    photo(R.drawable.calfraises)
-                )
-            )
-        }
-        else if(str=="Chest"){
-            listToSend.addAll(
-                listOf<photo>(
-                    photo(R.drawable.benchpress),
-                    photo(R.drawable.flatdumbbellpress),
-                    photo(R.drawable.butterfly),
-                    photo(R.drawable.flatbenchpress),
-                    photo(R.drawable.flatdumbbellpress),
-                    photo(R.drawable.pushups)
-                )
-            )
-        }
-        else if(str=="Back"){
-            listToSend.addAll(
-                listOf<photo>(
-                    photo(R.drawable.bentoverrows),
-                    photo(R.drawable.cablerows),
-                    photo(R.drawable.deadlift),
-                    photo(R.drawable.latpulldown),
-                    photo(R.drawable.machinerow),
-                    photo(R.drawable.str8armpulldown),
-                    photo(R.drawable.tbarrow)
-                )
-            )
-        }
-        else if(str=="Shoulder"){
-            listToSend.addAll(
-                listOf<photo>(
-                    photo(R.drawable.shoulderpress),
-                    photo(R.drawable.lateralraises),
-                )
-            )
-        }
-        else if(str=="Legs"){
-            listToSend.addAll(
-                listOf<photo>(
-                    photo(R.drawable.lunges),
-                    photo(R.drawable.deadlift),
-                    photo(R.drawable.squats),
-                    photo(R.drawable.calfraises),
-                    photo(R.drawable.hamstringcurls),
-                    photo(R.drawable.legpress),
-                    photo(R.drawable.frontsquats),
-                    photo(R.drawable.legextension)
-                )
-            )
-        }
-        else if(str=="Triceps"){
-            listToSend.addAll(
-                listOf<photo>(
-                    photo(R.drawable.skullcrusher),
-                    photo(R.drawable.tricepdips),
-                    photo(R.drawable.overheadtriceps),
-                    photo(R.drawable.closegrippress)
-                )
-            )
-        }
-        else if(str=="Biceps"){
-            listToSend.addAll(
-                listOf<photo>(
-                    photo(R.drawable.inclinecurls),
-                    photo(R.drawable.barbellcurls),
-                    photo(R.drawable.dumbbellcurls),
-                    photo(R.drawable.hammercurls),
-                    photo(R.drawable.cablecurls)
-                )
-            )
-        }
-        return listToSend
+    private fun list(): ArrayList<info> {
+        var Exerc = ArrayList<info>()
+        val monEx: ArrayList<info> = arrayListOf(
+            info("Incline Bench Press", photo(R.drawable.benchpress), false),
+            info("Flat Dumbbell Press", photo(R.drawable.flatdumbbellpress), false),
+            info("Dumbbell Shoulder Press", photo(R.drawable.shoulderpress), false),
+            info("Butterfly X Tricep Extension (Superset)", photo(R.drawable.butterfly), false),
+            info("Lateral Raises", photo(R.drawable.lateralraises), false),
+            info("Skull Crusher", photo(R.drawable.skullcrusher), false),
+            info("Tricep Dips", photo(R.drawable.tricepdips), false)
+        )
+        val tuesEx: ArrayList<info> = arrayListOf(
+            info("Lat Pull Down", photo(R.drawable.latpulldown), false),
+            info("Bent Over Rows", photo(R.drawable.bentoverrows), false),
+            info("Inclined Seated Dumbbell Curls", photo(R.drawable.inclinecurls), false),
+            info("Machine Row", photo(R.drawable.machinerow), false),
+            info("EZ Barbell Curls", photo(R.drawable.barbellcurls), false),
+            info("Dumbbell Curls", photo(R.drawable.dumbbellcurls), false),
+            info("Hammer Curls", photo(R.drawable.hammercurls), false)
+        )
+        val wedEx: ArrayList<info> = arrayListOf(
+            info("Lunges", photo(R.drawable.latpulldown), false),
+            info("Deadlift", photo(R.drawable.bentoverrows), false),
+            info("Hack Squats", photo(R.drawable.inclinecurls), false),
+            info("Calf Raises", photo(R.drawable.machinerow), false),
+            info("Hamstring Curls", photo(R.drawable.barbellcurls), false)
+        )
+        val thurEx: ArrayList<info> = arrayListOf(
+            info("Flat Bench Press", photo(R.drawable.flatbenchpress), false),
+            info("Incline Dumbbell Press", photo(R.drawable.inclinedbpress), false),
+            info("Standing Dumbbell Shoulder Press", photo(R.drawable.shoulderpress), false),
+            info("Butterfly", photo(R.drawable.butterfly), false),
+            info("Overhead Triceps", photo(R.drawable.overheadtriceps), false),
+            info("Lateral Raises", photo(R.drawable.lateralraises), false),
+            info("Close Grip Bench Press", photo(R.drawable.closegrippress), false),
+            info("Push-ups", photo(R.drawable.pushups), false)
+        )
+        val friEx: ArrayList<info> = arrayListOf(
+            info("T-Bar Row", photo(R.drawable.tbarrow), false),
+            info("Straight Arm Pulldown", photo(R.drawable.str8armpulldown), false),
+            info("Hammer Curls", photo(R.drawable.hammercurls), false),
+            info("Reverse Grip Pulldown", photo(R.drawable.reversegrippulldown), false),
+            info("Cable Curls", photo(R.drawable.cablecurls), false),
+            info("Cable Rows", photo(R.drawable.cablerows), false),
+            info("Barbell Curls", photo(R.drawable.barbellcurls), false),
+            info("Dumbbell Curls", photo(R.drawable.dumbbellcurls), false)
+
+        )
+        val satEx: ArrayList<info> = arrayListOf(
+            info("Squats", photo(R.drawable.squats), false),
+            info("Leg Press", photo(R.drawable.legpress), false),
+            info("Front Squats", photo(R.drawable.frontsquats), false),
+            info("Leg Extension", photo(R.drawable.legextension), false),
+            info("Calf Raises", photo(R.drawable.calfraises), false)
+        )
+        val chestEx: ArrayList<info> = arrayListOf(
+            info("Incline Bench Press", photo(R.drawable.benchpress), false),
+            info("Flat Dumbbell Press", photo(R.drawable.flatdumbbellpress), false),
+            info("Butterfly", photo(R.drawable.butterfly), false),
+            info("Flat Bench Press", photo(R.drawable.flatbenchpress), false),
+            info("Incline Dumbbell Press", photo(R.drawable.inclinedbpress), false),
+            info("Push-ups", photo(R.drawable.pushups), false)
+        )
+        val backEx: ArrayList<info> = arrayListOf(
+            info("Bent Over Rows", photo(R.drawable.bentoverrows), false),
+            info("Cable Rows", photo(R.drawable.cablerows), false),
+            info("Deadlift", photo(R.drawable.deadlift), false),
+            info("Lat Pull Down", photo(R.drawable.latpulldown), false),
+            info("Machine row", photo(R.drawable.machinerow), false),
+            info("Straight Arm Pull Down", photo(R.drawable.str8armpulldown), false),
+            info("T-bar row", photo(R.drawable.tbarrow), false)
+        )
+        val bicepEx: ArrayList<info> = arrayListOf(
+            info("Incline Bicep Curls", photo(R.drawable.inclinecurls), false),
+            info("Barbell Curls", photo(R.drawable.barbellcurls), false),
+            info("Dumbbell Curls", photo(R.drawable.dumbbellcurls), false),
+            info("Hammer Curls", photo(R.drawable.hammercurls), false),
+            info("Cable Curls", photo(R.drawable.cablecurls), false)
+        )
+        val tricepEx: ArrayList<info> = arrayListOf(
+            info("Skull Crusher", photo(R.drawable.skullcrusher), false),
+            info("Triceps Dips", photo(R.drawable.tricepdips), false),
+            info("Overhead Triceps", photo(R.drawable.overheadtriceps), false),
+            info("Close Grip Bench Press", photo(R.drawable.closegrippress), false)
+        )
+        val shoulderEx: ArrayList<info> = arrayListOf(
+            info("Shoulder Press", photo(R.drawable.shoulderpress), false),
+            info("Lateral Raises", photo(R.drawable.lateralraises), false)
+        )
+        val legsEx: ArrayList<info> = arrayListOf(
+            info("Lunges", photo(R.drawable.lunges), false),
+            info("Deadlift", photo(R.drawable.deadlift), false),
+            info("Squats", photo(R.drawable.squats), false),
+            info("Calf Raises", photo(R.drawable.calfraises), false),
+            info("Hamstring Curls", photo(R.drawable.hamstringcurls), false),
+            info("Leg Press", photo(R.drawable.legpress), false),
+            info("Front Squats", photo(R.drawable.frontsquats), false),
+            info("Leg Extension", photo(R.drawable.legextension), false)
+        )
+        if (tvDayName.text == "MONDAY") {
+            Exerc = monEx as ArrayList<info>
+        } else if (tvDayName.text == "TUESDAY") {
+            Exerc = tuesEx as ArrayList<info>
+        } else if (tvDayName.text == "WEDNESDAY") {
+            Exerc = wedEx as ArrayList<info>
+        } else if (tvDayName.text == "THURSDAY") {
+            Exerc = thurEx as ArrayList<info>
+        } else if (tvDayName.text == "FRIDAY") {
+            Exerc = friEx as ArrayList<info>
+        } else if (tvDayName.text == "SATURDAY") {
+            Exerc = satEx as ArrayList<info>
+        } else if (tvDayName.text == "Chest")
+            Exerc = chestEx as ArrayList<info>
+        else if (tvDayName.text == "Back")
+            Exerc = backEx as ArrayList<info>
+        else if (tvDayName.text == "Shoulder")
+            Exerc = shoulderEx as ArrayList<info>
+        else if (tvDayName.text == "Legs")
+            Exerc = legsEx as ArrayList<info>
+        else if (tvDayName.text == "Biceps")
+            Exerc = bicepEx as ArrayList<info>
+        else if (tvDayName.text == "Triceps")
+            Exerc = tricepEx as ArrayList<info>
+        return Exerc
     }
 }

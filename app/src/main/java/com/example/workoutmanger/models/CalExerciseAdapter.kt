@@ -1,17 +1,17 @@
 package com.example.workoutmanger.models
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.workoutmanger.R
 import kotlinx.android.synthetic.main.per_calorie_list.view.*
-import kotlinx.android.synthetic.main.per_day_list.view.*
 
-class CalExerciseAdapter(private val calories: MutableList<Any>): RecyclerView.Adapter<CalExerciseAdapter.ViewHolder>(){
+class CalExerciseAdapter(private val context: Context, private val caloList: ArrayList<ExerCal>): RecyclerView.Adapter<CalExerciseAdapter.ViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
-            LayoutInflater.from(parent.context).inflate(
+            LayoutInflater.from(context).inflate(
                 R.layout.per_calorie_list,
                 parent,
                 false
@@ -20,17 +20,17 @@ class CalExerciseAdapter(private val calories: MutableList<Any>): RecyclerView.A
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = calories
-        holder.exCal.text = item.toString()
-        holder.exText.text = item.toString()
+        val item = caloList[position]
+        holder.exCal.text = item.calorie.toString()
+        holder.exText.text = item.exercise
     }
 
     override fun getItemCount(): Int {
-        return calories.size
+        return caloList.size
     }
 
     class ViewHolder(view : View): RecyclerView.ViewHolder(view){
-        val exText = view.tvExer
+        val exText = view.tvEx
         val exCal = view.tvCal
     }
 }
