@@ -21,7 +21,7 @@ class CalorieActivity: AppCompatActivity() {
         val list : ArrayList<ExerCal> = listToImport
 
         rvExDone.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
-        val itemAdapter = CalExerciseAdapter(this, list)
+        val itemAdapter = CalExerciseAdapter(this, listToImport)
         rvExDone.adapter = itemAdapter
 
     }

@@ -99,6 +99,7 @@ class DayAdapter(val perDayContext: Context, val perDayList: ArrayList<info>): R
             imageOfExer.setImageResource(item.pic.imageID)
             cbox.setOnCheckedChangeListener { buttonView, isChecked ->
                 if (item.isChecked) {
+
                     listToImport.add(ExerCal(item.heading, totalEx[item.heading]!!))
                 }
             }
