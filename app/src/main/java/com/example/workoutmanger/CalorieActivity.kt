@@ -18,10 +18,10 @@ class CalorieActivity: AppCompatActivity() {
         animDraw.setExitFadeDuration(5000)
         animDraw.start()
 
-        val list : ArrayList<ExerCal> = listToImport
+        val list : ArrayList<ExerCal> = listToImport.distinct() as ArrayList<ExerCal>
 
         rvExDone.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
-        val itemAdapter = CalExerciseAdapter(this, listToImport)
+        val itemAdapter = CalExerciseAdapter(this, list)
         rvExDone.adapter = itemAdapter
 
     }

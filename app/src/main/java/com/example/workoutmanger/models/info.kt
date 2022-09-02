@@ -6,5 +6,5 @@ import androidx.annotation.DrawableRes
 data class info(
     val heading: String,
     val pic: photo,
-    val isChecked: Boolean = false
+    var Checked: Boolean = false
 )

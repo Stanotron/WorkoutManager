@@ -2,10 +2,13 @@ package com.example.workoutmanger.models
 
 import android.content.Context
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.CompoundButton
+import android.widget.TextView
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.workoutmanger.CalorieActivity
@@ -88,6 +91,17 @@ class DayAdapter(val perDayContext: Context, val perDayList: ArrayList<info>): R
             else -> R.layout.per_day_list
         }
     }
+
+    fun addToList(checkedEx : TextView, Checked : Boolean ){
+        if (Checked) {
+//            Log.i("DayAdapter","Checked in function" )
+            listToImport.add(ExerCal(checkedEx.text.toString(), totalEx[checkedEx.text.toString()]!!))
+        }
+        else{
+            listToImport.remove(ExerCal(checkedEx.text.toString(), totalEx[checkedEx.text.toString()]!!))
+        }
+    }
+
     inner class ViewHolder1(view: View): RecyclerView.ViewHolder(view) {
         val exText = view.tvExercise
         val imageOfExer = view.ivExercise
@@ -97,18 +111,19 @@ class DayAdapter(val perDayContext: Context, val perDayList: ArrayList<info>): R
             val item = perDayList[position]
             exText.text = item.heading
             imageOfExer.setImageResource(item.pic.imageID)
-            cbox.setOnCheckedChangeListener { buttonView, isChecked ->
-                if (item.isChecked) {
-
-                    listToImport.add(ExerCal(item.heading, totalEx[item.heading]!!))
-                }
+            cbox.isChecked = item.Checked
+            cbox.setOnCheckedChangeListener { _, isChecked ->
+//                Log.i("DayAdapter","Checked on positions $position" )
+                addToList(exText,isChecked)
+                item.Checked = true
             }
         }
     }
+
     inner class ViewHolder2(view: View): RecyclerView.ViewHolder(view) {
-        val button = view.btExDone
+        val button: Button? = view.btExDone
         fun bind(){
-            button.setOnClickListener{
+            button!!.setOnClickListener{
                 perDayContext.startActivity(Intent(perDayContext,CalorieActivity::class.java))
             }
         }
