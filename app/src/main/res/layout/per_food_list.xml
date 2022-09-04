@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="110dp"
     android:paddingStart="8dp"
-    android:paddingEnd="8dp">
+    android:paddingEnd="8dp"
+    android:layout_marginHorizontal="8dp">
 
     <TextView
         android:id="@+id/tvFoodTitle"
@@ -12,7 +13,7 @@
         android:layout_height="wrap_content"
         android:text="Example"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="22sp"
         android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/cbDone"
@@ -25,7 +26,7 @@
         android:textColor="@color/white"
         android:layout_height="wrap_content"
         android:text="Calories: "
-        android:textSize="24sp"
+        android:textSize="25sp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -36,7 +37,11 @@
     <CheckBox
         android:id="@+id/cbDone"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:scaleX="1.2"
+        android:scaleY="1.2"
+        android:layout_marginTop="26dp"
+        android:buttonTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

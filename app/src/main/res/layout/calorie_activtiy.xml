@@ -5,7 +5,7 @@
     android:id="@+id/calorie_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_cal_anim">
+    android:background="@drawable/gradient_cal_end">
 
     <TextView
         android:id="@+id/textView2"
@@ -108,11 +108,11 @@
             android:id="@+id/btnAddFood"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
             android:layout_weight="1"
             android:backgroundTint="@color/white"
             android:text="Add"
             android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
-            android:layout_marginHorizontal="10dp"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

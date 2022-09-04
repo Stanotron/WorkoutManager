@@ -12,6 +12,7 @@
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/gradient_anim.xml" value="0.2075" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/gradient_cal_anim.xml" value="0.201" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/gradient_cal_center.xml" value="0.1" />
+        <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/gradient_cal_end.xml" value="0.1" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/gradient_cal_start.xml" value="0.201" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/gradient_center.xml" value="0.2075" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/gradient_end.xml" value="0.2075" />
@@ -35,6 +36,7 @@
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/layout/per_food_list.xml" value="0.2153153153153153" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/layout/rounded_edittext.xml" value="0.2153153153153153" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/layout/trial.xml" value="0.536" />
+        <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/menu/cal_menu.xml" value="0.2153153153153153" />
       </map>
     </option>
   </component>

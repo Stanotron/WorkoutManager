@@ -15,10 +15,10 @@ class CalorieActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.calorie_activtiy)
 
-        val animDraw = calorie_layout.background as AnimationDrawable
-        animDraw.setEnterFadeDuration(10)
-        animDraw.setExitFadeDuration(5000)
-        animDraw.start()
+//        val animDraw = calorie_layout.background as AnimationDrawable
+//        animDraw.setEnterFadeDuration(10)
+//        animDraw.setExitFadeDuration(5000)
+//        animDraw.start()
 
         val list : ArrayList<ExerCal> = listToImport.distinct() as ArrayList<ExerCal>
 
