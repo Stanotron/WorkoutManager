@@ -21,7 +21,7 @@ class CalExerciseAdapter(private val context: Context, private val caloList: Arr
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = caloList[position]
-        holder.exCal.text = item.calorie.toString()
+        holder.exCal.text = "Calories: "+item.calorie.toString()
         holder.exText.text = item.exercise
     }
 
