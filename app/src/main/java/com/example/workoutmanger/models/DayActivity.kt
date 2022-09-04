@@ -25,7 +25,7 @@ class DayActivity : AppCompatActivity() {
             info("Incline Bench Press", photo(R.drawable.benchpress), false),
             info("Flat Dumbbell Press", photo(R.drawable.flatdumbbellpress), false),
             info("Dumbbell Shoulder Press", photo(R.drawable.shoulderpress), false),
-            info("Butterfly X Tricep Extension (Superset)", photo(R.drawable.butterfly), false),
+            info("Butterfly", photo(R.drawable.butterfly), false),
             info("Lateral Raises", photo(R.drawable.lateralraises), false),
             info("Skull Crusher", photo(R.drawable.skullcrusher), false),
             info("Tricep Dips", photo(R.drawable.tricepdips), false)

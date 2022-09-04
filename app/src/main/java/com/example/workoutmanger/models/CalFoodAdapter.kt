@@ -9,6 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.workoutmanger.R
 import kotlinx.android.synthetic.main.per_food_list.view.*
 
+val foodCal : ArrayList<Int> = arrayListOf()
+
 class CalFoodAdapter(private val foods: MutableList<food>) : RecyclerView.Adapter<CalFoodAdapter.FoodViewHolder>() {
         class FoodViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
@@ -24,6 +26,7 @@ class CalFoodAdapter(private val foods: MutableList<food>) : RecyclerView.Adapte
 
         fun addFood(name : String, cal : Int ){
             foods.add(food(name,cal))
+            foodCal.add(cal)
             notifyItemInserted(foods.size-1)
         }
 
@@ -31,7 +34,11 @@ class CalFoodAdapter(private val foods: MutableList<food>) : RecyclerView.Adapte
             foods.removeAll { food ->
                 food.checked
             }
+            update()
             notifyDataSetChanged()
+        }
+
+        fun update(){
         }
 
         override fun onBindViewHolder(holder: FoodViewHolder, position: Int) {

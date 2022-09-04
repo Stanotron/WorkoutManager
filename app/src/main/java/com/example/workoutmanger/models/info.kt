@@ -1,7 +1,5 @@
 package com.example.workoutmanger.models
 
-import androidx.annotation.DrawableRes
-
 
 data class info(
     val heading: String,

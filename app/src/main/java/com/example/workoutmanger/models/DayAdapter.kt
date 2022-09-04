@@ -26,7 +26,7 @@ class DayAdapter(val perDayContext: Context, val perDayList: ArrayList<info>): R
         Pair("Incline Bench Press",115),
         Pair("Flat Dumbbell Press",111),
         Pair("Dumbbell Shoulder Press",85),
-        Pair("Butterfly X Tricep Extension (Superset)",98),
+        Pair("Butterfly",98),
         Pair("Lateral Raises",68),
         Pair("Skull Crusher",102),
         Pair("Tricep Dips",60),
