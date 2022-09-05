@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/main_gradient_anim"
+    android:background="@drawable/main_gradient_rv"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -140,13 +140,13 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:backgroundTint="#FBFCFC"
-            android:shape="ring"
-            app:cardElevation="3dp"
             android:layout_height="match_parent"
             android:layout_margin="15dp"
             android:layout_weight="1"
-            app:cardCornerRadius="50dp">
+            android:backgroundTint="#FBFCFC"
+            android:shape="ring"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="3dp">
 
             <Button
                 android:id="@+id/btFriday"
@@ -154,23 +154,23 @@
                 android:layout_height="match_parent"
                 android:background="?android:attr/selectableItemBackground"
                 android:text="Friday"
-                app:cornerRadius="30in"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/black"
                 app:cardCornerRadius="50dp"
                 app:cardElevation="60dp"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textColor="@color/black" />
+                app:cornerRadius="30in" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/end"
             android:layout_width="match_parent"
-            android:backgroundTint="#FBFCFC"
-            android:shape="ring"
-            app:cardElevation="3dp"
             android:layout_height="match_parent"
             android:layout_margin="15dp"
             android:layout_weight="1"
+            android:backgroundTint="#FBFCFC"
+            android:shape="ring"
             app:cardCornerRadius="50dp"
-            >
+            app:cardElevation="3dp">
 
             <Button
                 android:id="@+id/btSaturday"
@@ -180,9 +180,9 @@
                 android:text="Saturday"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="@color/black"
-                app:cornerRadius="30in"
                 app:cardCornerRadius="50dp"
-                app:cardElevation="60dp" />
+                app:cardElevation="60dp"
+                app:cornerRadius="30in" />
 
         </androidx.cardview.widget.CardView>
 
@@ -192,7 +192,8 @@
         android:id="@+id/rvMain"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="15dp"
+        android:requiresFadingEdge="vertical"
+        android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -210,4 +211,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ll3" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

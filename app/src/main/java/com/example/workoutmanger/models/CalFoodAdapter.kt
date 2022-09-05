@@ -1,10 +1,8 @@
 package com.example.workoutmanger.models
 
-import android.graphics.Paint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.workoutmanger.R
 import kotlinx.android.synthetic.main.per_food_list.view.*
@@ -39,6 +37,10 @@ class CalFoodAdapter(private val foods: MutableList<food>) : RecyclerView.Adapte
         }
 
         fun update(){
+            foodCal.clear()
+            for (i in foods.indices){
+                foodCal.add(foods[i].calories)
+            }
         }
 
         override fun onBindViewHolder(holder: FoodViewHolder, position: Int) {

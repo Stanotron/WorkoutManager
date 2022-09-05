@@ -1,20 +1,12 @@
 package com.example.workoutmanger
 
-import android.app.Dialog
-import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.Window
-import android.widget.RadioGroup
-import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.workoutmanger.models.*
 import kotlinx.android.synthetic.main.calorie_activtiy.*
-import kotlinx.android.synthetic.main.final_out.*
-import java.lang.Math.abs
+import kotlin.math.absoluteValue
 
 class CalorieActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -55,6 +47,7 @@ class CalorieActivity: AppCompatActivity() {
             var totfood: Int = 0
             var totEx: Int = 0
             var difference: Int = 0
+            var outcome: String = ""
             for (i in foodCal.indices) {
                 totfood += foodCal[i]
             }
@@ -63,14 +56,24 @@ class CalorieActivity: AppCompatActivity() {
             }
             difference = totEx - totfood
 
-            val dialog = Dialog(this)
-            dialog.setContentView(R.layout.final_out)
-            dialog.setCanceledOnTouchOutside(true)
-            val food = dialog.findViewById(R.id.tvFoodOut) as TextView
-            val ex = dialog.findViewById(R.id.tvExOut) as TextView
-            food.text = totfood.toString()
-            ex.text = totEx.toString()
-            dialog.show()
+            if(difference<0){
+                outcome = "Calories gained: "
+            }
+            else if(difference>0) {
+                outcome = "Calories lost: "
+            }
+
+            val alertDialog = AlertDialog.Builder(this)
+            alertDialog.setTitle("Final Outcome")
+            alertDialog.setMessage(
+                "Calories Burned From Exercise :$totEx \nCalories Taken From Food :$totfood \n\n$outcome \n${difference.absoluteValue}"
+            )
+            alertDialog.setPositiveButton(
+                "OK"
+            ){_,_ ->}
+            val alert = alertDialog.create()
+            alert.setCanceledOnTouchOutside(false)
+            alert.show()
         }
 
         btCalculate.setOnClickListener {
