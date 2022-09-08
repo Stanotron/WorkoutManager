@@ -11,6 +11,9 @@
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/gradient3.xml" value="0.2" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/gradient4.xml" value="0.2075" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/gradient_anim.xml" value="0.2075" />
+        <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/gradient_anim2.xml" value="0.1795" />
+        <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/gradient_anim2_centre.xml" value="0.1795" />
+        <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/gradient_anim2_end.xml" value="0.1795" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/gradient_cal_anim.xml" value="0.201" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/gradient_cal_center.xml" value="0.1" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/gradient_cal_end.xml" value="0.1" />
@@ -18,6 +21,8 @@
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/gradient_center.xml" value="0.2075" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/gradient_end.xml" value="0.2075" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/gradient_start.xml" value="0.2075" />
+        <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/gradiet_anim2_start.xml" value="0.1795" />
+        <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/main_gradient.xml" value="0.2205" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/main_gradient_anim.xml" value="0.1" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/main_gradient_end.xml" value="0.1" />
@@ -32,13 +37,15 @@
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/layout/final_out.xml" value="0.1" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/layout/intro.xml" value="0.536" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/layout/main_list.xml" value="0.1" />
-        <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/layout/per_calorie_list.xml" value="0.1" />
+        <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/layout/per_calorie_list.xml" value="0.2" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/layout/per_day_button.xml" value="0.2153153153153153" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/layout/per_day_list.xml" value="0.4" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/layout/per_food_list.xml" value="0.2153153153153153" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/layout/rounded_edittext.xml" value="0.2153153153153153" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/layout/trial.xml" value="0.536" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/menu/cal_menu.xml" value="0.2153153153153153" />
+        <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+        <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
       </map>
     </option>
   </component>

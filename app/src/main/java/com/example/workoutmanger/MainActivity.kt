@@ -4,11 +4,19 @@ import android.content.Intent
 import android.graphics.drawable.AnimationDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.example.workoutmanger.models.ExerCal
+import com.example.workoutmanger.models.food
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.exercise_activity.*
 
-val listToImport :  ArrayList<ExerCal> = arrayListOf()
+val listToImport :  ArrayList<ExerCal> = arrayListOf(ExerCal("Exercise",0),ExerCal("Please Do Something",0))
+val foods: MutableList<food> = mutableListOf()
+val foodCal : ArrayList<Int> = arrayListOf()
+val exerciseCal : ArrayList<Int> = arrayListOf()
+
+//var totfood: Int = 0
+var totEx: Int = 0
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,7 +33,6 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ExerciseActivity::class.java)
             startActivity(intent)
         }
-
         calButton.setOnClickListener{
             val intent = Intent(this, CalorieActivity::class.java)
             startActivity(intent)
