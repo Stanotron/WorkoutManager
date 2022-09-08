@@ -14,10 +14,10 @@ class ExerciseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.exercise_activity)
 
-//        val animDraw = exercise_layout.background as AnimationDrawable
-//        animDraw.setEnterFadeDuration(10)
-//        animDraw.setExitFadeDuration(5000)
-//        animDraw.start()
+        val animDraw = exercise_layout.background as AnimationDrawable
+        animDraw.setEnterFadeDuration(10)
+        animDraw.setExitFadeDuration(5000)
+        animDraw.start()
 
         rvMain.layoutManager = LinearLayoutManager(this)
         val itemAdapter = mainAdapter(this, getList())

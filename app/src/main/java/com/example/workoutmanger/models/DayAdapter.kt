@@ -11,10 +11,7 @@ import android.widget.CompoundButton
 import android.widget.TextView
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.example.workoutmanger.CalorieActivity
-import com.example.workoutmanger.ExerciseActivity
-import com.example.workoutmanger.R
-import com.example.workoutmanger.listToImport
+import com.example.workoutmanger.*
 import com.example.workoutmanger.models.DayAdapter.*
 import kotlinx.android.synthetic.main.activity_main.view.*
 import kotlinx.android.synthetic.main.per_day_button.view.*
@@ -95,9 +92,11 @@ class DayAdapter(val perDayContext: Context, val perDayList: ArrayList<info>): R
     fun addToList(checkedEx : TextView, Checked : Boolean ){
         if (Checked) {
 //            Log.i("DayAdapter","Checked in function" )
+            totEx += totalEx[checkedEx.text]!!
             listToImport.add(ExerCal(checkedEx.text.toString(), totalEx[checkedEx.text.toString()]!!))
         }
         else{
+            totEx -= totalEx[checkedEx.text]!!
             listToImport.remove(ExerCal(checkedEx.text.toString(), totalEx[checkedEx.text.toString()]!!))
         }
     }
@@ -115,7 +114,7 @@ class DayAdapter(val perDayContext: Context, val perDayList: ArrayList<info>): R
             cbox.setOnCheckedChangeListener { _, isChecked ->
 //                Log.i("DayAdapter","Checked on positions $position" )
                 addToList(exText,isChecked)
-                item.Checked = true
+                item.Checked = !item.Checked
             }
         }
     }
