@@ -25,6 +25,6 @@
         <activity android:name=".models.DayActivity"></activity>
         <activity android:name=".ExerciseActivity"></activity>
         <activity android:name=".CalorieActivity"></activity>
-    </application>
 
+    </application>
 </manifest>

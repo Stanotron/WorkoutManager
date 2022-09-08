@@ -5,11 +5,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.workoutmanger.R
+import com.example.workoutmanger.foodCal
+import com.example.workoutmanger.foods
 import kotlinx.android.synthetic.main.per_food_list.view.*
 
-val foodCal : ArrayList<Int> = arrayListOf()
-
-class CalFoodAdapter(private val foods: MutableList<food>) : RecyclerView.Adapter<CalFoodAdapter.FoodViewHolder>() {
+class CalFoodAdapter(foods: MutableList<food>) : RecyclerView.Adapter<CalFoodAdapter.FoodViewHolder>() {
         class FoodViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FoodViewHolder {

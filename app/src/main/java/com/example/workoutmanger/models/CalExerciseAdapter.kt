@@ -6,9 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.workoutmanger.R
+import com.example.workoutmanger.exerciseCal
 import kotlinx.android.synthetic.main.per_calorie_list.view.*
 
-val exerciseCal : ArrayList<Int> = arrayListOf()
+
 
 class CalExerciseAdapter(private val context: Context, private val caloList: ArrayList<ExerCal>): RecyclerView.Adapter<CalExerciseAdapter.ViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -22,18 +23,26 @@ class CalExerciseAdapter(private val context: Context, private val caloList: Arr
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = caloList[position]
+        var x : Int = 2
+        if(caloList.size==2){
+            x=1
+            holder.reps.text = ""
+        }
+        val item = caloList[position+x]
         exerciseCal.add(item.calorie)
         holder.exCal.text = "Calories: "+item.calorie.toString()
         holder.exText.text = item.exercise
     }
 
     override fun getItemCount(): Int {
-        return caloList.size
+        var x : Int = 2
+        if(caloList.size==2) x=1
+        return caloList.size-x
     }
 
     class ViewHolder(view : View): RecyclerView.ViewHolder(view){
         val exText = view.tvEx
         val exCal = view.tvCal
+        val reps = view.tvReps
     }
 }

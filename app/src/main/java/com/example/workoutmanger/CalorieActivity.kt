@@ -1,6 +1,7 @@
 package com.example.workoutmanger
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -45,15 +46,15 @@ class CalorieActivity: AppCompatActivity() {
         fun out()
         {
             var totfood: Int = 0
-            var totEx: Int = 0
             var difference: Int = 0
+
             var outcome: String = ""
             for (i in foodCal.indices) {
                 totfood += foodCal[i]
             }
-            for (i in exerciseCal.indices) {
-                totEx += exerciseCal[i]
-            }
+//            for (i in exerciseCal.indices) {
+//                totEx += exerciseCal[i]
+//            }
             difference = totEx - totfood
 
             if(difference<0){
