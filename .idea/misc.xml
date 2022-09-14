@@ -7,6 +7,7 @@
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/arrow.xml" value="0.1765" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/btn_shape_capsule.xml" value="0.2205" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/btn_txt_selector.xml" value="0.2205" />
+        <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/fade_in.xml" value="0.22" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/gradeint_cal_end.xml" value="0.201" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/gradient3.xml" value="0.2" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/gradient4.xml" value="0.2075" />
@@ -14,6 +15,7 @@
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/gradient_anim2.xml" value="0.1795" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/gradient_anim2_centre.xml" value="0.1795" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/gradient_anim2_end.xml" value="0.1795" />
+        <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/gradient_anim2_start.xml" value="0.211" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/gradient_cal_anim.xml" value="0.201" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/gradient_cal_center.xml" value="0.1" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/gradient_cal_end.xml" value="0.1" />
@@ -30,7 +32,8 @@
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/main_gradient_start.xml" value="0.201" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/rounded_et.xml" value="0.153" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/drawable/shape.xml" value="0.2205" />
-        <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/layout/activity_main.xml" value="0.4" />
+        <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/layout/activity_splash_screen.xml" value="0.176" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/layout/calorie_activtiy.xml" value="0.264" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/layout/exercise_activity.xml" value="0.1" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/layout/exercise_day.xml" value="0.264" />
