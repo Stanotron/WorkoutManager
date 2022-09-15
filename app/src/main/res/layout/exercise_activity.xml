@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_anim2"
+    android:background="@drawable/main_gradient_rv"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -20,9 +20,9 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:backgroundTint="#FBFCFC"
+            android:backgroundTint="@android:color/transparent"
             android:shape="ring"
-            app:cardElevation="3dp"
+            app:cardElevation="6dp"
             android:layout_height="match_parent"
             android:layout_margin="15dp"
             android:layout_weight="1"
@@ -32,13 +32,11 @@
                 android:id="@+id/btMonday"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Monday"
-                app:cornerRadius="30in"
-                app:cardCornerRadius="50dp"
-                app:cardElevation="60dp"
-                android:textColor="@color/black"
                 android:background="?android:attr/selectableItemBackground"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+                android:text="Monday"
+                android:fontFamily="@font/alata"
+                android:textSize="25dp"
+                android:textColor="@color/white" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView

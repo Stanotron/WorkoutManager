@@ -35,7 +35,7 @@
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/layout/activity_splash_screen.xml" value="0.176" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/layout/calorie_activtiy.xml" value="0.264" />
-        <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/layout/exercise_activity.xml" value="0.1" />
+        <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/layout/exercise_activity.xml" value="0.264" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/layout/exercise_day.xml" value="0.264" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/layout/final_out.xml" value="0.1" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/layout/intro.xml" value="0.536" />
@@ -47,6 +47,8 @@
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/layout/rounded_edittext.xml" value="0.2153153153153153" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/layout/trial.xml" value="0.536" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/menu/cal_menu.xml" value="0.2153153153153153" />
+        <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/mipmap-anydpi-v26/ic_icon.xml" value="0.1" />
+        <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/mipmap-anydpi-v26/ic_icon_round.xml" value="0.1" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
         <entry key="..\:/Users/Tushar Jain/AndroidStudioProjects/WorkoutManger/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
       </map>

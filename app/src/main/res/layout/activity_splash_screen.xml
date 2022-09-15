@@ -7,7 +7,7 @@
 
     <ImageView
         android:layout_width="280dp"
-        android:layout_height="180dp"
+        android:layout_height="170dp"
         android:background="@drawable/ss_removebg_preview"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
