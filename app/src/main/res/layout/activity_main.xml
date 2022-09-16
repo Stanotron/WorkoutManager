@@ -1,87 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/root_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_anim">
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="232dp"
         android:layout_height="40dp"
+        android:layout_marginBottom="40dp"
         android:background="@drawable/wikedfit_text"
-        android:layout_marginTop="595dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivCircle"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="145dp"
+        android:src="@drawable/circle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvWelcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="165dp"
-        android:text=""
+    <ImageView
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="145dp"
+        android:src="@drawable/roundedbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/exButton"
+        style="@style/AppTheme.ButtonStyle"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="145dp"
+        android:text="Routines"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#C2A0D1"
         android:textStyle="bold"
-        android:textSize="35dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:shape="ring"
-        app:cardCornerRadius="30dp"
-        app:cardElevation="3dp"
-        android:backgroundTint="#0000ffff"
+    <ImageView
+        android:id="@+id/ivCircle2"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/circle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvWelcome">
+        app:layout_constraintTop_toBottomOf="@id/exButton" />
 
-        <Button
-            android:id="@+id/exButton"
-            app:cornerRadius="30dp"
-            android:backgroundTint="#802ECC71"
-            android:layout_width="250dp"
-            android:layout_height="60dp"
-            android:text="Start Your Routine"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="@android:color/white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvWelcome" />
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:layout_marginTop="50dp"
-        android:shape="ring"
-        app:cardCornerRadius="30dp"
-        app:cardElevation="3dp"
-        android:backgroundTint="#0000ffff"
+    <ImageView
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/roundedbutton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cv1">
+        app:layout_constraintTop_toBottomOf="@id/exButton" />
 
-        <Button
-            android:id="@+id/calButton"
-            android:layout_width="250dp"
-            android:layout_height="60dp"
-            android:backgroundTint="#802ECC71"
-            android:text="Calorie Counter"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="@android:color/white"
-            app:cornerRadius="30in"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            />
-    </androidx.cardview.widget.CardView>
+    <Button
+        android:id="@+id/calButton"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="100dp"
+        style="@style/AppTheme.ButtonStyle"
+        android:text="Calories"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#C2A0D1"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
