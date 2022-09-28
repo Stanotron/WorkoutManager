@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/main_gradient_rv"
+    android:background="@drawable/gradient_anim"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -20,7 +20,7 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:backgroundTint="@android:color/transparent"
+            android:backgroundTint="#FBFCFC"
             android:shape="ring"
             app:cardElevation="6dp"
             android:layout_height="match_parent"
@@ -31,12 +31,16 @@
             <Button
                 android:id="@+id/btMonday"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="?android:attr/selectableItemBackground"
+                android:layout_height="wrap_content"
                 android:text="Monday"
-                android:fontFamily="@font/alata"
-                android:textSize="25dp"
-                android:textColor="@color/white" />
+                android:textStyle="bold"
+                android:textColor="#C2A0D1"
+                android:textSize="17dp"
+                android:fontFamily="@font/montserrat_medium"
+                app:cornerRadius="30in"
+                app:cardCornerRadius="50dp"
+                android:background="?android:attr/selectableItemBackground"
+                />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -56,11 +60,12 @@
                 android:layout_height="wrap_content"
                 android:text="Tuesday"
                 app:cornerRadius="30in"
+                android:textSize="17dp"
+                android:fontFamily="@font/montserrat_medium"
                 app:cardCornerRadius="50dp"
-                app:cardElevation="60dp"
-                android:textColor="@color/black"
-                android:background="?android:attr/selectableItemBackground"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+                android:textStyle="bold"
+                android:textColor="#C2A0D1"
+                android:background="?android:attr/selectableItemBackground"/>
 
         </androidx.cardview.widget.CardView>
 
@@ -96,8 +101,10 @@
                 app:cornerRadius="30in"
                 app:cardCornerRadius="50dp"
                 app:cardElevation="60dp"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textColor="@color/black" />
+                android:textSize="17dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:textStyle="bold"
+                android:textColor="#C2A0D1" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -117,10 +124,10 @@
                 android:background="?android:attr/selectableItemBackground"
                 android:text="Thursday"
                 app:cornerRadius="30in"
-                app:cardCornerRadius="50dp"
-                app:cardElevation="60dp"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textColor="@color/black" />
+                android:textSize="17dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:textStyle="bold"
+                android:textColor="#C2A0D1" />
 
         </androidx.cardview.widget.CardView>
 
@@ -152,11 +159,10 @@
                 android:layout_height="match_parent"
                 android:background="?android:attr/selectableItemBackground"
                 android:text="Friday"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textColor="@color/black"
-                app:cardCornerRadius="50dp"
-                app:cardElevation="60dp"
-                app:cornerRadius="30in" />
+                android:textStyle="bold"
+                android:textColor="#C2A0D1"
+                android:textSize="17dp"
+                android:fontFamily="@font/montserrat_medium" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -176,22 +182,42 @@
                 android:layout_height="match_parent"
                 android:background="?android:attr/selectableItemBackground"
                 android:text="Saturday"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textColor="@color/black"
-                app:cardCornerRadius="50dp"
-                app:cardElevation="60dp"
-                app:cornerRadius="30in" />
+                android:textStyle="bold"
+                android:textColor="#C2A0D1"
+                android:textSize="17dp"
+                android:fontFamily="@font/montserrat_medium"/>
 
         </androidx.cardview.widget.CardView>
 
     </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="98dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#ffffff"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll3" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="98dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="44dp"
+        android:backgroundTint="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/ll3" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvMain"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:requiresFadingEdge="vertical"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -202,13 +228,16 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="EXERCISE BY PART "
-        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-        android:textColor="@color/white"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Exercise By Part"
+        android:textColor="#f1c4f3"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ll3" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

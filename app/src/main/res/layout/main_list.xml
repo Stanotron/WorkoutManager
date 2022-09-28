@@ -11,9 +11,10 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:backgroundTint="@android:color/transparent"
+        android:backgroundTint="#f1c4f3"
         android:paddingBottom="10dp"
-        app:cardElevation="30dp">
+        app:cardCornerRadius="15dp"
+        app:cardElevation="6dp">
 
             <Button
                 android:id="@+id/btBody"
