@@ -35,8 +35,9 @@
                 android:layout_gravity="left"
                 android:layout_margin="10dp"
                 android:textColor="#38114F"
-                android:textSize="22sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
+                android:fontFamily="@font/montserrat_medium"
                 tools:text="Item" />
 
 

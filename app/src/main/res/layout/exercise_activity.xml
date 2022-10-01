@@ -193,22 +193,24 @@
 
     <View
         android:id="@+id/divider"
-        android:layout_width="98dp"
-        android:layout_height="5dp"
+        android:layout_width="83dp"
+        android:layout_height="1dp"
         android:layout_marginTop="44dp"
         android:layout_marginEnd="8dp"
-        android:backgroundTint="#ffffff"
+        android:background="#ffffff"
         app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ll3" />
 
     <View
         android:id="@+id/divider2"
-        android:layout_width="98dp"
+        android:layout_width="83dp"
         android:layout_height="1dp"
         android:layout_marginTop="44dp"
-        android:backgroundTint="#ffffff"
+        android:background="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/ll3" />
 
@@ -230,7 +232,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:fontFamily="@font/montserrat_medium"
-        android:text="Exercise By Part"
+        android:text="EXERCISE BY PART"
         android:textColor="#f1c4f3"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
