@@ -24,3 +24,34 @@ This application can:
 
 ## Screenshots
 
+Splash Screen
+
+<img height="400px" src="https://user-images.githubusercontent.com/100690010/193406552-e27cbda7-91ed-4885-a969-3c29ed87accc.png"/>
+
+Main Page
+
+<img height="400px" src="https://user-images.githubusercontent.com/100690010/193406582-fe7d2946-7a19-422b-92e5-6d8da147780d.png"/>
+
+Exercises Page
+
+<img height="400px" src="https://user-images.githubusercontent.com/100690010/193406589-5386fa7c-ee66-401c-8695-35b3a79b3b6c.png"/>
+
+Calories Page
+
+<img height="400px" src="https://user-images.githubusercontent.com/100690010/193406598-26062066-205a-474b-8636-281f144a85d9.png"/>
+
+Exerceise per day 
+
+<img height="400px" src="https://user-images.githubusercontent.com/100690010/193406609-f6862162-5605-4346-8908-a8f1972061a1.png"/>
+
+Calories Burned Button
+
+<img height="400px" src="https://user-images.githubusercontent.com/100690010/193406623-90ce82b8-fa95-49c8-b099-886534dc4027.png"/>
+
+Calories Page with consumed food list
+
+<img height="400px" src="https://user-images.githubusercontent.com/100690010/193406642-cc515f37-3ee1-4be0-b75a-5ac4384da4db.png"/>
+
+Final Result
+
+<img height="400px" src="https://user-images.githubusercontent.com/100690010/193406656-b576538c-bd21-4618-a42f-23f4252cb775.png"/>
